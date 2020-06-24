@@ -7,7 +7,6 @@ const CreateBlog = (props) => (
             <div className="create__container">
                 <h1>Create blog</h1>
                 <EntryFormPage onSubmit={(blogEntry) => {
-                    console.log('From createBlog.js ' + blogEntry)
                     props.dispatch(startCreateBlog(blogEntry));
                     props.history.push('/');
                 }}/>

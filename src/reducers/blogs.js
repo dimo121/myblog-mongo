@@ -26,26 +26,7 @@ export default (state = blogsDefaultState, action) => {
         case 'DELETE_BLOG':
             return state.filter((blog) => blog.id != action.id);
         case 'SET_BLOGS':
-            //need to load entries into array not object.
-            const result = action.blogs.map((blog) => {
-                const resultArray = [];
-                //iterate through object returned by firebase (suppose to be an array) and push entries onto array
-                Object.entries(blog.entries).forEach(([key,value]) => resultArray.push(
-                    {
-                        id: key,
-                        ...value
-                    }
-                ));
-                //return individual blog and nested array of entries for each blog
-                return {
-                    ...blog,
-                    entries: resultArray
-                };
-            });
-            //return all blogs to redux store as array
-            return [
-                ...result
-            ];
+            return action.blogs;
         default:
             return state; 
     }

@@ -11,7 +11,7 @@ class EntryItem extends React.Component {
         return (
             <div className="entryContainer">
                 <h1>{this.props.entry.title}<span className="entryContainer__span">{this.props.entry.createdAt}</span></h1>
-                <p>{this.props.entry.content}</p>
+                <p>{this.props.entry.description}</p>
             </div>
         );
     }

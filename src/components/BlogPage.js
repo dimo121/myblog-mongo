@@ -10,8 +10,9 @@ class BlogPage extends React.Component{
     }
 
     render(){
-        const index = this.props.blogs.findIndex((item) => item.id == this.props.match.params.id);
-        this.blog = this.props.blogs[index];
+        this.blog = this.props.blogs.find(item => item.id == this.props.match.params.id)
+        //const index = this.props.blogs.findIndex((item) => item.id == this.props.match.params.id);
+        //this.blog = this.props.blogs[index];
         return (
             <div className="search__container">
                 <div className="blogContainer">

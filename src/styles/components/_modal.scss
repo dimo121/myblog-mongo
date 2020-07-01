@@ -1,0 +1,53 @@
+
+// > sign indicates that we are targeting divs that are direct descendents as opposed to children of children
+.ReactModalPortal > div {
+    opacity: 0; 
+}
+
+.ReactModalPortal .ReactModal__Overlay{ //seen in the elements panel
+    align-items: center; //also flexbox property
+    display: flex;
+    justify-content: center;
+    transition: opacity 200ms ease-in-out; // transition to opacity 1 over 200ms
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open{ //seen in the elements panel
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close{ //seen in the elements panel
+    opacity: 0;
+}
+
+.modal{
+    background: $dark-grey;
+    outline-style: 2px solid black;
+    //outline-offset: -5px;
+    border-radius: 1rem;
+    color: white;
+    max-width: 30rem;
+    outline: none;
+    padding: $l-size;
+    text-align: center;
+}
+
+.modal__title {
+    margin: 0 0 $m-size 0;
+}
+
+.modal__body {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 $l-size 0;
+    word-break: break-all; //words do not start a new line by default
+}
+
+.modal__button {
+    background: $gainsboro;    
+    border: 1px solid black;
+    border-radius: 2rem;
+    margin: $m-size;
+    margin-top: 6rem;
+    height: 3rem;
+    width: 9rem;
+}

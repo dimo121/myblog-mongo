@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import BlogItem from './BlogItem';
 import EntryItem from './EntryItem';
 
 class BlogPage extends React.Component{
@@ -11,8 +10,6 @@ class BlogPage extends React.Component{
 
     render(){
         this.blog = this.props.blogs.find(item => item.id == this.props.match.params.id)
-        //const index = this.props.blogs.findIndex((item) => item.id == this.props.match.params.id);
-        //this.blog = this.props.blogs[index];
         return (
             <div className="search__container">
                 <div className="blogContainer">

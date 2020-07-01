@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { startSetBlogs } from './actions/blogs';
 import 'normalize.css/normalize.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss';
 
 const store = configureStore();
